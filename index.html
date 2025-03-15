@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth	scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+
+    <!-- navbar section -->
+
+    <header>
+
+      <nav id="nav-section">
+        <div class="navbar bg-base-100 shadow-sm">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+              </div>
+  
+              
+            </div>
+            <a class=" flex btn btn-ghost text-xl">
+              <div>English</div>
+              <img src="./assets/logo.png" alt="">
+              <div>bangla</div>
+            </a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+  
+          </div>
+          <div class="navbar-end">
+           
+          </div>
+        </div>
+      </nav>
+
+    
+    
+    </header>
+    <!-- navbar section end -->
+
+
+
+    <!-- baner section -->
+
+    <div class="bg-base-200">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img
+            src="./assets/hero-student.png"
+            class="" />
+          <div>
+            <h1 class="text-5xl font-bold"><span class="text-blue-300">English</span> is easy</h1>
+            <p class="py-6">
+                আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+            </p>
+
+            <div>
+
+              <fieldset class="fieldset">
+                <input id="user_name" type="text" class="input" placeholder="Enter your Name" />
+              </fieldset>
+
+              <fieldset class="fieldset">
+                <input id="user_password" type="password" class="input" placeholder="Enter your password" />
+              </fieldset>
+            </div>
+
+            <button id="login-btn" class="btn btn-primary mt-2">Get Started</button>
+          </div>
+        </div>
+      </div>
+    <!-- baner section end -->
+
+
+    <!-- lets learn section -->
+
+    <h1 class="mt-5 justify-self-center text-3xl"><span class="text-blue-500">Let's</span> Learn Vocabularies</h1>
+
+    <section id="category-container" class="flex gap-3 mt-5 ml-5">
+    </section>
+
+    <!-- card section -->
+     <section>
+
+      <div id="card_container" class="w-11/12 mx-auto grid grid-cols-3 gap-4 mr-5 mt-5">
+
+        <div>
+          <img src="./assets/alert-error.png" alt="">
+        </div>
+        
+      </div>
+     </section>
+
+
+    <!-- Faq section start -->
+
+    <h1 class=" justify-self-center mt-5  text-5xl"><span class="text-blue-500">Frequently</span> Asked Questions</h1>
+
+
+    <div class=" mt-5 ml-5">
+        <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" checked="checked" />
+            <div class="collapse-title font-semibold">1.  the difference between var, let, and const</div>
+            <div class="collapse-content text-sm">var and let create variables that can be reassigned another value. const creates "constant" variables that cannot be reassigned another value. developers shouldn't use var anymore. They should use let or const instead</div>
+          </div>
+
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">2. the difference between map(), forEach(), and filter()</div>
+            <div class="collapse-content text-sm">Foreach return nothing filter will return a array of maching elements or empty array  and map will return a array .</div>
+          </div>
+
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">3. explain arrow functions and how they are different from regular functions?</div>
+            <div class="collapse-content text-sm">An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage: Arrow functions don't have their own bindings to this , arguments , or super , and should not be used as methods.</div>
+          </div>
+
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">4.how JavaScript Promises work </div>
+            <div class="collapse-content text-sm">In JavaScript, a Promise is an object that will produce a single value some time in the future. If the promise is successful, it will produce a resolved value, but if something goes wrong then it will produce a reason why the promise failed. The possible outcomes here are similar to that of promises in real life</div>
+          </div>
+
+          <div class="collapse bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title font-semibold">4. how closures work in javascript</div>
+            <div class="collapse-content text-sm">A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time</div>
+          </div>
+
+
+
+    </div>
+    <!-- Faq section end -->
+
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
