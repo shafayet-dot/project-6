@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
+
+<style>
+  .active {
+    background: blue;
+    color: white;
+     }
+</style>
 
 <body>
 
@@ -37,6 +45,9 @@
   
           </div>
           <div class="navbar-end">
+            <a href="#faq" class="btn border-purple-500 mr-5">Faq</a>
+            <a href="#learn" class="btn border-purple-500 mr-5">Learn</a>
+            <a class="btn border-purple-500 mr-5">Logout</a>
            
           </div>
         </div>
@@ -69,7 +80,7 @@
               </fieldset>
 
               <fieldset class="fieldset">
-                <input id="user_password" type="password" class="input" placeholder="Enter your password" />
+                <input value="" id="user_password" type="password" class="input" placeholder="code 123456" />
               </fieldset>
             </div>
 
@@ -82,9 +93,15 @@
 
     <!-- lets learn section -->
 
-    <h1 class="mt-5 justify-self-center text-3xl"><span class="text-blue-500">Let's</span> Learn Vocabularies</h1>
+    <h1 id="learn" class="mt-5 justify-self-center text-3xl"><span class="text-blue-500">Let's</span> Learn Vocabularies</h1>
 
     <section id="category-container" class="flex gap-3 mt-5 ml-5">
+    </section>
+
+    
+
+    <section id="loader" class="text-center py-10 hidden">
+      <span class="loading loading-dots loading-xl"></span>
     </section>
 
     <!-- card section -->
@@ -92,17 +109,31 @@
 
       <div id="card_container" class="w-11/12 mx-auto grid grid-cols-3 gap-4 mr-5 mt-5">
 
-        <div>
-          <img src="./assets/alert-error.png" alt="">
-        </div>
+
+
+        <!-- <img src="./assets/alert-error.png" alt=""> -->
+
+          <!-- <div>
+          <div id="child_text" class=" w-full text-center mt-10 bg-gray-100 py-20 rounded-xl justify-self-center items-center ml-20">
+            <p class="text-gray-600 mb-5 text-sm">Ar kono data nai</p>
+            <h1 class="font-semibold text-xl">Ar kono data nai</h1>
+        </div>  
+        </div> -->
+        <div  class=" w-full text-center mt-10 bg-gray-100 py-20 rounded-xl justify-self-center items-center ml-20">
+          <p class="text-gray-600 mb-5 text-sm">আপনি এখনো কোন Lesson Select করেন ন</p>
+          <h1 class="font-semibold text-xl">একটি Lesson Select করুন।</h1>
+      </div>
+
         
       </div>
      </section>
 
+    
+
 
     <!-- Faq section start -->
 
-    <h1 class=" justify-self-center mt-5  text-5xl"><span class="text-blue-500">Frequently</span> Asked Questions</h1>
+    <h1 id="faq" class=" justify-self-center mt-5  text-5xl"><span class="text-blue-500">Frequently</span> Asked Questions</h1>
 
 
     <div class=" mt-5 ml-5">
@@ -140,6 +171,26 @@
 
     </div>
     <!-- Faq section end -->
+
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+
+<dialog id="word_detail" class="modal">
+  <div class="modal-box">
+    
+    <div id="detail_container"></div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+ 
 
 
     <script src="./index.js"></script>

@@ -1,0 +1,17 @@
+function loadwords(categoryName) {
+  if (categoryName) {
+    fetch(`https://openapi.programming-hero.com/api/level/${categoryName}`)
+      .then((res) => res.json())
+      .then((data) => displaywords(data.data));
+  }
+}
+
+
+// function loadwords(categoryName){
+//     // console.log(categoryName)
+//     console.log('click')
+//     fetch(`https://openapi.programming-hero.com/api/level/${categoryName}`)
+//     .then((res)=>res.json())
+//     .then((data)=>displaywords(data.data))
+
+// }
